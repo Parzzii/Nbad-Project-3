@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<main class="main-content">
+    <div class="container">
+        <div class="connection-details">
+            <h4 class="connection-title"><span class="title-text"><%= connection.title %></span> <span class="host-text"> by <%= connection.host %></span></h4>
+            <div class="category">
+                <% if (connection.category === 'Others' && connection.newCategory) { %>
+                  <p class="category-title"><%= connection.newCategory %></p>
+                <% } else { %>
+                  <p class="category-title"><%= connection.category %></p>
+                <% } %>
+              </div>
+            <ul class="connection-meta">
+                <li class="connection-info">Location: <%= connection.where %></li>
+                <li class="connection-info">Details: <%= connection.details %></li>
+                <li class="connection-info">Start Date: <%= connection.startdate %></li>
+                <li class="connection-info">End Date: <%= connection.enddate %></li>
+                <li class="connection-info">Time: <%= connection.start %> - <%= connection.end %></li>
+                <li class="connection-info">Posted <%= connection.createdAt %> </li>
+                <div class="connection-image">
+                    <img src="<%= connection.image %>" alt="Connection Image" class="connection-image">
+                </div>
+            </ul>
+            <div class="connection-actions">
+                <form>
+                    <button type="submit" formmethod="get" formaction="/connection/<%= connection.id %>/edit" class="button edit-button">Edit</button>
+                    <button type="submit" formmethod="post" formaction="/connection/<%= connection.id %>?_method=DELETE" class="button delete-button">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer') %>

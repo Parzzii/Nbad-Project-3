@@ -1,0 +1,63 @@
+<%- include('../partials/header.ejs') %>
+<main class="main-content">
+  <div class="container">
+    <form method="POST" action="/connection/<%= connection.id %>?_method=PUT" class="new-form">
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required onchange="toggleNewCategory()">
+        <option value="">Select Category</option>
+        <option value="Meeting" <%= connection.category === "Meeting" ? "selected" : "" %>>Meeting</option>
+        <option value="Design" <%= connection.category === "Design" ? "selected" : "" %>>Design</option>
+        <option value="QNA" <%= connection.category === "QNA" ? "selected" : "" %>>QNA</option>
+        <option value="Coding" <%= connection.category === "Coding" ? "selected" : "" %>>Coding</option>
+        <option value="Others" <%= connection.category === "Others" ? "selected" : "" %>>Others</option>
+      </select>
+
+      <div id="newCategoryContainer" style="display: none;">
+        <label for="newCategory">New Category:</label>
+        <input type="text" id="newCategory" name="newCategory" placeholder="Enter new category">
+      </div>
+
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" value="<%= connection.title %>" required>
+
+      <label for="details">Details:</label>
+      <textarea id="details" name="details" rows="5" required minlength="10" placeholder="Enter event details"><%= connection.details %></textarea>
+
+      <label for="where">Where:</label>
+      <input type="text" id="where" name="where" value="<%= connection.where %>" required>
+
+      <label for="startdate">Start Date:</label>
+      <input type="date" id="startdate" name="startdate" value="<%= connection.startdate %>" required>
+
+      <label for="start">Start Time:</label>
+      <input type="time" id="start" name="start" value="<%= connection.start %>" required>
+      
+      <label for="enddate">End Date:</label>
+      <input type="date" id="enddate" name="enddate" value="<%= connection.enddate %>" required>
+
+      <label for="end">End Time:</label>
+      <input type="time" id="end" name="end" value="<%= connection.end %>" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</main>
+<%- include('../partials/footer.ejs') %>
+
+<script>
+    function toggleNewCategory() {
+        var categorySelect = document.getElementById('category');
+        var newCategoryContainer = document.getElementById('newCategoryContainer');
+
+        // If "Others" is selected, show the new category input field; otherwise, hide it
+        if (categorySelect.value === 'Others') {
+            newCategoryContainer.style.display = 'block';
+        } else {
+            newCategoryContainer.style.display = 'none';
+        }
+    }
+
+    // Call toggleNewCategory on page load to ensure proper initial state
+    toggleNewCategory();
+</script>
