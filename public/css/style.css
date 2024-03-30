@@ -1,0 +1,348 @@
+/*//////////////     Header        ////////////////////////////////////////////////////////////////////////////////////*/
+/* Basic styling */
+header {
+  background-color: #00703C ; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+}
+
+nav.firstclass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-left-image {
+  height: 50px; /* Adjust the height of the logo */
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-button {
+  color: #fff;
+  background-color: #444; /* Darker gray background for buttons */
+  padding: 10px 20px;
+  border-radius: 25px; /* Larger rounded corners */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.header-button:hover {
+  background-color: #666; /* Darker gray on hover */
+}
+
+/* Navigation menu */
+nav {
+  background-color: #222; /* Darker background for navigation */
+  padding: 10px 20px;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #999; /* Light gray on hover */
+}
+
+/*/////////////////// New form and editing form    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Basic styling */
+body {
+  font-family: 'Raleway', sans-serif; /* Use a clean, readable font */
+  margin: 0;
+  margin-bottom: 270px;
+  padding: 0;
+  background: #f0f0f0; /* Light background */
+  background-image: linear-gradient(to bottom right, #fff, #e0e0e0); /* Gradient overlay */
+}
+
+.main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent; /* Allow background image to shine through */
+}
+.main-content {
+  padding: 20px; /* Add padding to the main content */
+  margin: 0 auto; /* Center the content horizontally */
+  max-width: 1200px; /* Set a maximum width for the content */
+}
+
+.container {
+  width: 600px;
+  padding: 40px;
+  border-radius: 15px; /* Softer corners */
+  background: rgba(255, 255, 255, 0.356); /* Semi-transparent white */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Larger shadow */
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333; /* Darker text for contrast */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background: #f5f5f5; /* Light background */
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add glow on focus */
+}
+
+textarea {
+  resize: vertical; /* Allow resizing vertically */
+}
+
+select {
+  padding-right: 40px; /* Adjust padding for arrow */
+  background-repeat: no-repeat;
+  background-position: right 15px center; /* Center arrow vertically */
+}
+
+button[type="submit"] {
+  background: #ff6b6b; /* Light red submit button */
+  color: white;
+  padding: 18px 40px; /* Larger button size */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle button shadow */
+}
+
+button[type="submit"]:hover {
+  background: #ff4e4e; /* Darker red on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow */
+}
+
+/*    On Show page      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Style instructions */
+.instructions {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* White text */
+  background-color: #00703C; /* Turquoise background */
+  padding: 10px 20px; /* Add padding for better visibility */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif; /* Futuristic font */
+  font-weight: bold; /* Bold font */
+  text-transform: uppercase; /* Uppercase letters for a more futuristic look */
+}
+
+/* Style connection list */
+.connection-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style connection items */
+.connection-item {
+  background-color: #1e1e1e; /* Dark gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+}
+
+/* Hover effect */
+.connection-item:hover {
+  transform: translateY(-5px); /* Lifts the item on hover */
+  background-color: #333; /* Darken the background color on hover */
+}
+
+/* Style connection links */
+.connection-link {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-size: 20px;
+  font-weight: bold; /* Bold letters */
+}
+
+/* Ensure text inside <p> tags is visible */
+.connection-item p {
+  color: #fff; /* White text */
+  margin: 0; /* Remove default margin */
+}
+
+/* Adjust padding and margin for better spacing */
+.connection-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ///////   Inside Show page after selecting the connection       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Main Content Styling */
+.main-content {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.host-text {
+  font-size: 18px;
+  color: #666; /* Adjust color as needed */
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50; /* Adjust color as needed */
+}
+
+.connection-details {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.connection-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.connection-meta {
+  margin-bottom: 20px;
+}
+
+.connection-info {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.connection-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connection-image img {
+  width: 80%; /* Reduce the width to 10% of its original size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Add margin to separate image from other content */
+}
+
+
+.connection-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+
+/*////////////////      Footer Styling     /////////////////////*/
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-link,
+.social-button {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-button {
+  font-size: 20px;
+}
+
+.main-image {
+  margin-right: 10px; /* Reduced margin */
+  max-width: 100px; /* Limit image width */
+}
+
+.footer-copyright {
+  padding-right: 10px;
+}
+
+.footer-link:hover,
+.social-button:hover {
+  color: #ccc;
+}

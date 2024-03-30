@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+<main class="main-content">
+    <div class="container">
+        <% if (connections.length) { %>
+            <% const categories = {}; %>
+            <% connections.forEach(connection => { %>
+                <% if (!categories[connection.category]) categories[connection.category] = []; %>
+                <% categories[connection.category].push(connection); %>
+            <% }); %>
+            <% Object.entries(categories).forEach(([category, connectionsInCategory]) => { %>
+                <section class="connection-category">
+                    <h2 class="category-title"><%= category %></h2>
+                    <div class="connection-list">
+                        <% connectionsInCategory.forEach(connection => { %>
+                            <a href="/connection/<%= connection.id %>" class="connection-link">
+                                <div class="connection-item">
+                                    <%= connection.title %>
+                                </div>
+                            </a>
+                        <% }); %>
+                    </div>
+                </section>
+            <% }); %>
+        <% } else { %>
+            <p class="no-connections">No connections found</p>
+        <% } %>
+    </div>
+</main>
+<%- include('../partials/footer.ejs') %>
